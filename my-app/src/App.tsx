@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SearchBar from './Components/SearchBarComponent/SearchBar'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <SearchBar/>
     </div>
   );
 }
