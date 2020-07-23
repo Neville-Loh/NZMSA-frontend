@@ -2,7 +2,7 @@ import React, { useState }from 'react';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import { Button, Grid, TextField } from '@material-ui/core'
-import {IUserInput} from '../../Common/interfaces'
+import {IUserInput} from '../../Common/Interfaces'
 import './SearchBar.css';
 
 interface ISearchBarProps {
@@ -10,7 +10,7 @@ interface ISearchBarProps {
 }
 
 
-function SearchBar() {
+function SearchBar(props: ISearchBarProps) {
             
     // State for Text field of SearchQuery
     const [SearchQuery, setSearchQuery] = useState<string | null>("");
@@ -43,7 +43,7 @@ function SearchBar() {
                 StartDate: StartDate,
                 EndDate: EndDate
             }
-            //props.SetUserInput(UserInput);
+            props.SetUserInput(UserInput);
         } else {
             setHasFocus(true);
         }
